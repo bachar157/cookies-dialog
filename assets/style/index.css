@@ -1,0 +1,73 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.hero-banner {
+    height: 100vh;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-banner {
+    height: 100vh;
+    background-image: url('../img/DALL·E\ 2023-12-13\ 00.21.16\ -\ A\ captivating\ hero\ banner\ image\ for\ a\ website\,\ featuring\ a\ breathtaking\ natural\ view\ with\ no\ content\ or\ text.\ The\ scene\ should\ include\ a\ panoramic\ vie.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.content {
+    padding: 20px;
+}
+dialog {
+    margin: auto;
+    width: 310px;
+    padding: 19px 25px 24px 25px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 0.1);
+    animation: 0.25s linear anim;
+    
+  }
+  
+  @keyframes anim {
+    from {
+      opacity: 0;
+      translate: 0 -8px;
+    } to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+  
+  dialog::backdrop {
+    background-color: rgb(13 16 19 / 0.3);
+    backdrop-filter: blur(10px);
+  }
+  
+  dialog h2 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -.4px;
+  }
+  
+  dialog p {
+    margin-top: 12px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -.1px;
+  }
+  
+  dialog p span {
+    font-weight: 700;
+    color: #833cff;
+    cursor: pointer;
+  }

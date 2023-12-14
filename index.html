@@ -10,33 +10,62 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap">
     <link rel="stylesheet" href="./assets/style/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script defer src=""></script>
+    <script defer src="./assets/script/index.js" type="module"></script>
     <title>YOUR PAGE TITLE CHANGE IT </title>
   </head>
   <body>
-    <div class="hero-banner">
-      <h1>Welcome to Our Website</h1>
-      <div class="wrapper">
-        <main class="container">
-          <article>
+    <div class="container">
+        <div class="text">
             <p>
-              Click <span class="open">here</span> to open the dialog
+                A cookie is a small piece of text sent to your browser by a website you visit. 
+                It helps the site remember information about your visit, which can make it easier 
+                to visit the site again and make the site more useful to you.
             </p>
-          </article>
-        </main>
-        <div class="dialogs">
-          <dialog>
-            <h2>Dialog</h2>
-            <p>
-              The &lt;dialog&gt; HTML element represents a dialog box or other
-              interactive component.
-              <br><br>
-              CLick <span>here</span> to close this dialog
-            </p>
-          </dialog>
         </div>
-      </div>
-  </div>
-   
-  </body>
+        <dialog class="dialog dialog1">
+            <h3>Cookies</h3>
+            <p>
+                We use cookies to improve your experience on our website. By clicking
+                "Accept", you agree to the use of cookies for marketing and analytics purposes. 
+            </p>
+            <div class="dialog-buttons">
+                <button class="accept">Accept</button>
+                <button class="settings">Settings</button>
+            </div>
+        </dialog>
+        <dialog class="dialog dialog2">
+            <h3>Settings</h3>
+            <div class="switch-container">
+                <label class="switch browser">
+                  <span class="selector">Browser</span>
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="switch-container">
+                <label class="switch os">
+                  <span class="selector">Operating systems</span>
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="switch-container">
+                <label class="switch width">
+                  <span class="selector">Screen width</span>
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="switch-container">
+                <label class="switch height">
+                  <span class="selector">Screen height</span>
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button class="save">Save preferences</button>
+        </dialog>
+    </div>
+    <div class="overlay"></div>
+</body>
 </html>

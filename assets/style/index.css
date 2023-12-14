@@ -1,73 +1,198 @@
 
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+body {
+  background-image: url('../img/DALL·E 2023-12-13 00.21.16 - A captivating hero banner image for a website, featuring a breathtaking natural view with no content or text. The scene should include a panoramic vie.png');
+  background-size: cover;        /* Ensures the image covers the whole area */
+  background-position: center;   /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
 }
-.hero-banner {
-    height: 100vh;
-    background-color: #4CAF50;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.hero-banner {
-    height: 100vh;
-    background-image: url('../img/DALL·E\ 2023-12-13\ 00.21.16\ -\ A\ captivating\ hero\ banner\ image\ for\ a\ website\,\ featuring\ a\ breathtaking\ natural\ view\ with\ no\ content\ or\ text.\ The\ scene\ should\ include\ a\ panoramic\ vie.png');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+
+.text {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.content {
-    padding: 20px;
+
+.text p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
 }
-dialog {
-    margin: auto;
-    width: 310px;
-    padding: 19px 25px 24px 25px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgb(0 0 0 / 0.1);
-    animation: 0.25s linear anim;
-    
-  }
+
+.dialog1 {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Shift the element to the center */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  padding-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 30rem; /* Consolidated width */
+  max-height: 20rem;
+  padding-bottom: 30px;
+}
+
+.dialog1 h3 {
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 0px;
+}
+
+.dialog1 p {
+  font-size: 25px;
+  color: #666;
+  margin-bottom: 30px;
+  margin-top: 30px
+}
+
+/* Buttons for Dialog 1 */
+.accept, .settings {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
   
-  @keyframes anim {
-    from {
-      opacity: 0;
-      translate: 0 -8px;
-    } to {
-      opacity: 1;
-      translate: 0 0;
-    }
-  }
+}
+
+.settings {
+  background-color: #f0ad4e;
+}
+
+.accept:hover {
+  background-color: #45a049;
+}
+
+.settings:hover {
+  background-color: #ec971f;
+}
+
+/* Dialog 2 Styles */
+.dialog2 {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Shift the element to the center */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  padding-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 30rem; /* Consolidated width */
+  max-height: 20rem;
+}
+
+.dialog2 h3 {
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.switch-container {
   
-  dialog::backdrop {
-    background-color: rgb(13 16 19 / 0.3);
-    backdrop-filter: blur(10px);
-  }
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+.selector{
+  position: absolute;
+  left: 50px;
+  margin-left: 20px;
+  padding-right: 100px;
+  margin-right: 50px; 
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 15px; 
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin-left: 20px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
   
-  dialog h2 {
-    font-size: 26px;
-    font-weight: 600;
-    letter-spacing: -.4px;
-  }
   
-  dialog p {
-    margin-top: 12px;
-    font-size: 1.7rem;
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: -.1px;
-  }
-  
-  dialog p span {
-    font-weight: 700;
-    color: #833cff;
-    cursor: pointer;
-  }
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Save Button Style */
+.save {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save:hover {
+  background-color: #45a049;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
